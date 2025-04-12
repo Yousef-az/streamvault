@@ -1,0 +1,19 @@
+name = "streamvault"
+compatibility_date = "2023-08-01"
+main = "./src/index.ts"
+
+[build]
+command = "npm run build"
+
+[vars]
+# Define variables that only need to be changed in one place
+# Runtime vars like secrets must be set via the dashboard or CLI
+
+[[kv_namespaces]]
+binding = "KV"
+id = "af6550dac4c04aee9f03345d9b2d4a1a"
+preview_id = "KV"
+
+[triggers]
+crons = []
+

@@ -1,0 +1,24 @@
+{
+  "name": "iptv-subscription-manager",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for managing IPTV subscriptions",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.{ts,js,json}'",
+    "lint": "eslint --ext .ts .",
+    "deploy": "wrangler publish",
+    "dev": "wrangler dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6",
+    "wrangler": "^4.10.0"
+  }
+}
