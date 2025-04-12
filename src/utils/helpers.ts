@@ -150,3 +150,8 @@ export function formatDeviceName(deviceType: string): string {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
 }
+
+export function validateApiKey(request: Request, env: Env): boolean {
+    const apiKey = request.headers.get("x-api-key");
+    return apiKey === env.STREAMVAULT_API_KEY;
+}
