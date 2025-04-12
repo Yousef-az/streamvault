@@ -1,5 +1,6 @@
 // src/types.ts
 export interface Env {
+    STREAMVAULT_API_KEY: string;
     STRIPE_SECRET_KEY: string;
     ACTIVATION_PANEL_KEY: string;
     KV: KVNamespace;
