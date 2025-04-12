@@ -8,10 +8,9 @@ export const REGIONAL_OPTIONS: Record<string, string> = {
 };
 
 export const REGION_DISPLAY_NAMES: Record<string, string> = {
-    north_america: "North America",
-    uk_europe: "UK & Europe",
-    middle_east_arabic: "Middle East & Arabic",
-    asia: "Asia",
+    north_america: "United States (North America)",
+    uk_europe: "Europe / UK",
+    middle_east_arabic: "Middle East / Arabic",
     global: "Global",
 };
 
@@ -23,22 +22,22 @@ export const STRIPE_PRICES: Record<string, string> = {
     "24": "price_1RAcRhRt8rNloVVOQclunaHF"   // INFINITY - $599 every 2 years
 };
 
-export const DEVICE_EMOJIS: Record<string, string> = {
-    smart_tv: "📺",
-    fire_stick: "🔥",
-    android_box: "📦",
-    ios: "📱",
-    android_phone: "📱",
-    web_browser: "🌐",
-    mag_box: "📼",
+export const DEVICE_DISPLAY_LABELS: Record<string, string> = {
+    ios: "🍎 Apple Devices",
+    fire_stick: "🔥 Fire Stick",
+    android_box: "📦 Android Box",
+    smart_tv: "📺 Smart TV",
+    android_phone: "📲 Android Phone",
+    web_browser: "🌐 Windows PC",
+    other: "✨ Other"
 };
 
 export const REGION_EMOJIS: Record<string, string> = {
-    north_america: "🌎",
+    north_america: "🇺🇸",
     uk_europe: "🇪🇺",
-    middle_east_arabic: "🌙",
+    middle_east_arabic: "🇸🇦",
     asia: "🌏",
-    global: "🌍",
+    global: "🌐",
 };
 
 export const DEVICE_INSTRUCTIONS: Record<string, string> = {
