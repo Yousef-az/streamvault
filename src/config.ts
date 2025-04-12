@@ -7,37 +7,31 @@ export const REGIONAL_OPTIONS: Record<string, string> = {
     global: "bouquet_global",
 };
 
-export const REGION_DISPLAY_NAMES: Record<string, string> = {
-    north_america: "United States (North America)",
-    uk_europe: "Europe / UK",
-    middle_east_arabic: "Middle East / Arabic",
-    global: "Global",
-};
-
 export const STRIPE_PRICES: Record<string, string> = {
-    "1": "price_1RAN1mRt8rNloVVOmKvL8NZy",   // LAUNCH - $34.99/month
-    "3": "price_1RAcdYRt8rNloVVOQ9xQz0S2",   // HORIZON - $94.99 every 3 months
-    "6": "price_1RAcgVRt8rNloVVOmWWseZbt",   // VOYAGE - $179 every 6 months
-    "12": "price_1RAcLVRt8rNloVVOju32toFh",  // ODYSSEY - $335/year
-    "24": "price_1RAcRhRt8rNloVVOQclunaHF"   // INFINITY - $599 every 2 years
+    "1": "price_1RAN1mRt8rNloVVOmKvL8NZy",
+    "3": "price_1RAcdYRt8rNloVVOQ9xQz0S2",
+    "6": "price_1RAcgVRt8rNloVVOmWWseZbt",
+    "12": "price_1RAcLVRt8rNloVVOju32toFh",
+    "24": "price_1RAcRhRt8rNloVVOQclunaHF"
 };
 
-export const DEVICE_DISPLAY_LABELS: Record<string, string> = {
-    ios: "🍎 Apple Devices",
-    fire_stick: "🔥 Fire Stick",
-    android_box: "📦 Android Box",
-    smart_tv: "📺 Smart TV",
-    android_phone: "📲 Android Phone",
-    web_browser: "🌐 Windows PC",
-    other: "✨ Other"
+export const REGION_CONFIG: Record<string, { display: string; emoji: string }> = {
+    north_america: { display: "United States (North America)", emoji: "🇺🇸" },
+    uk_europe: { display: "Europe / UK", emoji: "🇪🇺" },
+    middle_east_arabic: { display: "Middle East / Arabic", emoji: "🇸🇦" },
+    asia: { display: "Asia", emoji: "🌏" },
+    global: { display: "Global", emoji: "🌐" }
 };
 
-export const REGION_EMOJIS: Record<string, string> = {
-    north_america: "🇺🇸",
-    uk_europe: "🇪🇺",
-    middle_east_arabic: "🇸🇦",
-    asia: "🌏",
-    global: "🌐",
+export const DEVICE_CONFIG: Record<string, { label: string; emoji: string }> = {
+    ios: { label: "Apple Devices", emoji: "🍎" },
+    fire_stick: { label: "Fire Stick", emoji: "🔥" },
+    android_box: { label: "Android Box", emoji: "📦" },
+    smart_tv: { label: "Smart TV", emoji: "📺" },
+    android_phone: { label: "Android Phone", emoji: "📲" },
+    web_browser: { label: "Windows PC", emoji: "🌐" },
+    mag_box: { label: "MAG Box", emoji: "📼" },
+    other: { label: "Other", emoji: "✨" },
 };
 
 export const DEVICE_INSTRUCTIONS: Record<string, string> = {
