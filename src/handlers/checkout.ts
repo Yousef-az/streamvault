@@ -1,5 +1,5 @@
 // handlers/checkout.ts
-import { Env, SubscriptionSelection } from '../src/types';
+import { Env, SubscriptionSelection } from '../types';
 import {
     createErrorResponse,
     createJsonResponse,
@@ -10,8 +10,8 @@ import {
     parseDeviceTypes,
     validateDeviceTypes,
     validateRequiredParams
-} from '../src/utils/helpers';
-import { REGIONAL_OPTIONS, STRIPE_PRICES } from '../src/config';
+} from '../utils/helpers';
+import { REGIONAL_OPTIONS, STRIPE_PRICES } from '../config';
 
 /**
  * Creates a Stripe Checkout session based on the subscription selection.

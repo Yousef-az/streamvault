@@ -1,12 +1,12 @@
 // src/index.ts
 import { Env } from './types';
 import { createErrorResponse, createJsonResponse } from './utils/helpers';
-import { handleCreateCheckout } from '../handlers/checkout';
-import { handleActivate } from '../handlers/activation';
-import { handleCheckStatus } from '../handlers/status';
-import { handleDeviceInstructions } from '../handlers/instructions';
-import { handleStripeWebhook } from '../handlers/webhooks';
-import { handleCorsPreflightRequest } from '../handlers/cors';
+import { handleCreateCheckout } from './handlers/checkout';
+import { handleActivate } from './handlers/activation';
+import { handleCheckStatus } from './handlers/status';
+import { handleDeviceInstructions } from './handlers/instructions';
+import { handleStripeWebhook } from './handlers/webhooks';
+import { handleCorsPreflightRequest } from './handlers/cors';
 
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
