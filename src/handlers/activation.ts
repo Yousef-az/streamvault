@@ -1,5 +1,5 @@
 // handlers/activation.ts
-import { Env, UserCredentials } from '../src/types';
+import { Env, UserCredentials } from '../types';
 import {
     createErrorResponse,
     createJsonResponse,
@@ -10,9 +10,9 @@ import {
     parseDeviceTypes,
     validateDeviceTypes,
     validateRequiredParams
-} from '../src/utils/helpers';
-import { REGIONAL_OPTIONS } from '../src/config';
-import { buildEnhancedEmailBody, sendEmail } from '../src/utils/email';
+} from '../utils/helpers';
+import { REGIONAL_OPTIONS } from '../config';
+import { buildEnhancedEmailBody, sendEmail } from '../utils/email';
 
 /**
  * Activates or renews a subscription after Stripe payment success.
@@ -27,6 +27,7 @@ export async function handleActivate(request: Request, env: Env): Promise<Respon
         const deviceTypesParam = url.searchParams.get("device_types");
         const user_email = url.searchParams.get("user_email");
         const checkoutToken = url.searchParams.get("checkoutToken");
+        const firstName = url.searchParams.get("firstName");
 
         const validationError = validateRequiredParams({
             subscriptionLength,

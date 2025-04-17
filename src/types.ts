@@ -42,6 +42,7 @@ export interface UserCredentials {
     subscription_id?: string;
     stripe_customer_id?: string;
     status: "active" | "cancelled" | "expired";
+    first_name?: string; // Added field for customer's first name
 }
 
 export interface SubscriptionSelection {
@@ -50,6 +51,7 @@ export interface SubscriptionSelection {
     customer_id: string;
     device_types: string[]; // Supports multiple devices
     user_email: string;
+    first_name?: string; // Added field for customer's first name
 }
 
 export interface StripeSessionResponse {

@@ -1,7 +1,7 @@
 // handlers/instructions.ts
-import { Env } from '../src/types';
-import { createErrorResponse, createJsonResponse } from '../src/utils/helpers';
-import { DEVICE_INSTRUCTIONS } from '../src/config';
+import { Env } from '../types';
+import { createErrorResponse, createJsonResponse } from '../utils/helpers';
+import { DEVICE_INSTRUCTIONS } from '../config';
 
 /**
  * Handles device instructions retrieval.

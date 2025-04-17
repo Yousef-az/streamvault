@@ -1,7 +1,7 @@
 // handlers/webhooks.ts
-import { Env, UserCredentials } from '../src/types';
-import { createErrorResponse, logEvent, verifyStripeWebhookSignature } from '../src/utils/helpers';
-import { sendEmail } from '../src/utils/email';
+import { Env, UserCredentials } from '../types';
+import { createErrorResponse, logEvent, verifyStripeWebhookSignature } from '../utils/helpers';
+import { sendEmail } from '../utils/email';
 
 /**
  * Handles Stripe webhook events.
@@ -25,6 +25,7 @@ export async function handleStripeWebhook(request: Request, env: Env): Promise<R
             object: event.data.object.object,
         });
 
+        // Handle specific events
         switch (eventType) {
             case "checkout.session.completed": {
                 const session = event.data.object;

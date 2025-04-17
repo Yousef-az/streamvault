@@ -1,10 +1,10 @@
 // handlers/status.ts
-import { Env, UserCredentials } from "../src/types";
+import { Env, UserCredentials } from "../types";
 import {
     createErrorResponse,
     createJsonResponse,
     validateApiKey,
-} from "../src/utils/helpers"; // Assuming you put validateApiKey here
+} from "../utils/helpers"; // Assuming you put validateApiKey here
 
 /**
  * Handles account status checking.
