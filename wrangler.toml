@@ -1,0 +1,64 @@
+name = "streamvault"
+main = "./src/index.ts"
+compatibility_date = "2023-08-01"
+
+[vars]  # ✅ Used locally via `npx wrangler dev`
+STRIPE_SECRET_KEY        = "${STRIPE_SECRET_KEY}"
+STRIPE_PUBLISHABLE_KEY   = "${STRIPE_PUBLISHABLE_KEY}"
+STRIPE_WEBHOOK_SECRET    = "${STRIPE_WEBHOOK_SECRET}"
+SENDGRID_API_KEY         = "${SENDGRID_API_KEY}"
+ACTIVATION_API_KEY       = "${ACTIVATION_API_KEY}"
+NODE_ENV                 = "development"
+
+[[kv_namespaces]]
+binding     = "KV"
+id          = "af6550dac4c04aee9f03345d9b2d4a1a"
+preview_id  = "af6550dac4c04aee9f03345d9b2d4a1a"
+
+# ---------- Environment: TEST ----------
+[env.test]
+name = "streamvault-test"
+[env.test.vars]
+STRIPE_SECRET_KEY        = "${STRIPE_SECRET_KEY}"
+STRIPE_PUBLISHABLE_KEY   = "${STRIPE_PUBLISHABLE_KEY}"
+STRIPE_WEBHOOK_SECRET    = "${STRIPE_WEBHOOK_SECRET}"
+SENDGRID_API_KEY         = "${SENDGRID_API_KEY}"
+ACTIVATION_API_KEY       = "${ACTIVATION_API_KEY}"
+NODE_ENV                 = "test"
+
+[[env.test.kv_namespaces]]
+binding     = "KV"
+id          = "af6550dac4c04aee9f03345d9b2d4a1a"
+preview_id  = "af6550dac4c04aee9f03345d9b2d4a1a"
+
+# ---------- Environment: STAGING ----------
+[env.staging]
+name = "streamvault-staging"
+[env.staging.vars]
+STRIPE_SECRET_KEY        = "${STRIPE_SECRET_KEY}"
+STRIPE_PUBLISHABLE_KEY   = "${STRIPE_PUBLISHABLE_KEY}"
+STRIPE_WEBHOOK_SECRET    = "${STRIPE_WEBHOOK_SECRET}"
+SENDGRID_API_KEY         = "${SENDGRID_API_KEY}"
+ACTIVATION_API_KEY       = "${ACTIVATION_API_KEY}"
+NODE_ENV                 = "staging"
+
+[[env.staging.kv_namespaces]]
+binding     = "KV"
+id          = "af6550dac4c04aee9f03345d9b2d4a1a"
+preview_id  = "af6550dac4c04aee9f03345d9b2d4a1a"
+
+# ---------- Environment: PRODUCTION ----------
+[env.production]
+name = "streamvault-prod"
+[env.production.vars]
+STRIPE_SECRET_KEY        = "${STRIPE_SECRET_KEY}"
+STRIPE_PUBLISHABLE_KEY   = "${STRIPE_PUBLISHABLE_KEY}"
+STRIPE_WEBHOOK_SECRET    = "${STRIPE_WEBHOOK_SECRET}"
+SENDGRID_API_KEY         = "${SENDGRID_API_KEY}"
+ACTIVATION_API_KEY       = "${ACTIVATION_API_KEY}"
+NODE_ENV                 = "production"
+
+[[env.production.kv_namespaces]]
+binding     = "KV"
+id          = "af6550dac4c04aee9f03345d9b2d4a1a"
+preview_id  = "af6550dac4c04aee9f03345d9b2d4a1a"
