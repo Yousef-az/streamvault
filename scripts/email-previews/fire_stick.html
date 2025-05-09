@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fire_stick Email Preview</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .preview-box { border: 1px solid #ddd; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+    .variable { color: #0066cc; font-family: monospace; }
+    .device-type { font-weight: bold; color: #cc0066; }
+  </style>
+</head>
+<body>
+  <h1>fire_stick Email Template Preview</h1>
+  
+  <div class="preview-box">
+    <h2>Template Variables</h2>
+    <ul>
+      <li>Device Type: <span class="device-type">fire_stick</span></li>
+      <li>Username: <span class="variable">test_user123</span></li>
+      <li>Password: <span class="variable">SecurePass456!</span></li>
+      <li>Region: <span class="variable">north_america</span></li>
+      <li>Subscription Length: <span class="variable">12</span></li>
+      <li>Is Renewal: <span class="variable">false</span></li>
+      <li>First Name: <span class="variable">John</span></li>
+      <li>Server Domain: <span class="variable">iptv.blancosphere.com</span></li>
+    </ul>
+  </div>
+  
+  <div class="preview-box">
+    <h2>Email Content Preview</h2>
+    <p>This is a placeholder for the actual email content. To see the real templates, you need to test them directly with the Wrangler development server.</p>
+  </div>
+  
+  <div class="preview-box">
+    <h2>Testing Instructions</h2>
+    <p>To see the actual rendered email templates, you need to:</p>
+    <ol>
+      <li>Start your Cloudflare Worker with <code>npx wrangler dev</code></li>
+      <li>Create a new endpoint in your worker for previewing emails</li>
+      <li>Access the endpoint with appropriate query parameters</li>
+    </ol>
+  </div>
+</body>
+</html>
+  
