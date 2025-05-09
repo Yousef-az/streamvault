@@ -4,11 +4,11 @@ import {
     createErrorResponse,
     createJsonResponse,
     validateApiKey,
-} from "../utils/helpers"; // Assuming you put validateApiKey here
+} from "../utils/helpers";
 
 /**
  * Handles account status checking.
- * Secured via x-api-key header.
+ * Secured via STREAMVAULT_ADMIN_KEY using x-api-key header.
  */
 export async function handleCheckStatus(request: Request, env: Env): Promise<Response> {
     // 🔐 Step 1: Validate API Key

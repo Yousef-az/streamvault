@@ -11,7 +11,6 @@ import { buildOtherDeviceEmailTemplate } from './other';
 
 export { sendEmail };
 
-// Map device types to their builders
 const emailBuilders: Record<string, Function> = {
     'smart_tv': buildSmartTvEmailTemplate,
     'fire_stick': buildFireStickEmailTemplate,
@@ -20,13 +19,9 @@ const emailBuilders: Record<string, Function> = {
     'android_phone': buildAndroidPhoneEmailTemplate,
     'web_browser': buildWebBrowserEmailTemplate,
     'mag_box': buildMagBoxEmailTemplate,
-    'other': buildOtherDeviceEmailTemplate
+    'other': buildOtherDeviceEmailTemplate,
 };
 
-/**
- * Main function to build email for any device type.
- * This maintains the same interface as your original function.
- */
 export function buildEnhancedEmailBody(
     deviceType: string,
     username: string,

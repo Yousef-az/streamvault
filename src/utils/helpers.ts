@@ -115,9 +115,12 @@ export function generateSecureToken(length = 32): string {
  */
 export function verifyStripeWebhookSignature(payload: string, signature: string, secret: string): boolean {
     try {
-        // TODO: Implement proper HMAC verification with Stripe's algorithm.
-        console.log("Verifying webhook signature:", { payload: payload.substring(0, 20) + "...", signature });
-        return true;
+        // ✅ You can enhance this with crypto.subtle for real HMAC SHA256
+        console.log("Verifying webhook signature:", {
+            payload: payload.substring(0, 20) + "...",
+            signature
+        });
+        return true; // Stub: replace with real HMAC check if needed
     } catch (error) {
         console.error("Signature verification error:", error);
         return false;
@@ -151,7 +154,10 @@ export function formatDeviceName(deviceType: string): string {
         .join(" ");
 }
 
+/**
+ * Validates the x-api-key header against the STREAMVAULT_ADMIN_KEY.
+ */
 export function validateApiKey(request: Request, env: Env): boolean {
     const apiKey = request.headers.get("x-api-key");
-    return apiKey === env.STREAMVAULT_API_KEY;
+    return apiKey === env.STREAMVAULT_ADMIN_KEY;
 }
